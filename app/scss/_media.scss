@@ -1,0 +1,28 @@
+@media screen and (max-width: 1200px){
+	.container{
+	width: 83.57%;
+	margin: 0 auto;
+}
+	header{
+		position: relative;
+		background: #000;
+	}
+	header .header__flex {
+		display: flex;
+		justify-content: flex-start;
+	}
+	.menu ul {
+		margin-left: 10px;
+	}
+	header li:not(.last__menu) {
+		padding-right: 15px;
+	}
+	.menu a {
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 1061px){
+	.slick__btn {
+		display: none;
+	}
+}

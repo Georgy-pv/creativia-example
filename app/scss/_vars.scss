@@ -1,0 +1,84 @@
+@mixin scroll_bar {
+		text-align: center;
+		position: relative;
+		width: 515px;
+		height: 1px;
+		background: #000;
+		display: inline-block;
+    	left: 50%;
+    	transform: translate(-50%);
+    	.hex{
+    		display: inline-block;
+    		width: 21px;
+		    height: 19px;
+		    position: absolute;
+			bottom: -9px;
+    	}
+    	.hex__bar, .hex__bar1, .hex__bar2{
+			position: absolute;
+			width: 11px;
+			height: 19px;
+			background: #000;
+		}
+		.hex__bar1{
+			transform: rotate(120deg);
+		}
+		.hex__bar2{
+			transform: rotate(60deg);
+		}
+}
+
+@mixin hexagon($left, $right, $top){
+	.hexagon, .hexagon_1, .hexagon_2{
+		display: block;
+		position: absolute;
+		width: 18px;
+		height: 32px;
+		left: $left;
+		right: $right;
+		top: $top;
+		background: #e7e7e7;
+	}
+	.hexagon{
+		&:before{
+			content: "\f00c";
+			font-family: 'icomoon';
+			position: absolute;
+			top: 5px;
+			left: 2px;
+			z-index: 5;
+			font-size: 16px;
+		}
+	}
+	.hexagon_1{
+		transform: rotate(120deg);
+	}
+	.hexagon_2{
+		transform: rotate(60deg);
+	}
+}
+@mixin social__hexagon{
+	.hexagon, .hexagon_1, .hexagon_2{
+		display: block;
+		position: absolute;
+		width: 18px;
+		height: 32px;
+		background: #e7e7e7;
+	}
+	.hexagon_1{
+		transform: rotate(120deg);
+	}
+	.hexagon_2{
+		transform: rotate(60deg);
+	}
+}
+@mixin tittle_style{
+	font-family: $raleway_font;
+	font-size: 30px;
+	font-weight: 700;
+}
+@mixin description_style {
+	font-family: $lato_font;
+	font-size: 16px;
+	font-weight: 700;
+}
